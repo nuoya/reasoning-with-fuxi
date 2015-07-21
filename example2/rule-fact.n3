@@ -1,10 +1,11 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 @prefix : <MiningTheSocialWeb#> .
-:Socrates a :Man.
 
 @forAll :x .
 { :x a :Man  } log:implies { :x a :Mortal  } .
 { :x :lives :MtOlympus  } log:implies { :x a :god  } .
 { :x a :god  } log:implies { :x :lives :MtOlympus  } .
 { :x a :Man  } log:implies { :x :drinks :whisky  } .
+
+:Socrates a :Man.
 :ChuckNorris :lives :MtOlympus .

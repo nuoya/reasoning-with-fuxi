@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-Fuxi --rules=rule-fact.n3 --ruleFacts
+FuXi --rules=rule-fact.n3 --ruleFacts
