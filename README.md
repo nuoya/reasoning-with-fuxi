@@ -46,3 +46,47 @@ example2 » ./reason
 :Socrates a :Mortal ;
     :drinks :whisky .
 ```
+
+## example3
+
+This is taken from https://github.com/nuoya/FuXi/blob/master/examples/test1.example.sh
+```
+@prefix : <http://xdors.net/demo#> .
+@prefix iw: <http://inferenceweb.stanford.edu/2004/07/iw.owl#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skolem: <http://code.google.com/p/python-dlp/wiki/SkolemTerm#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:has_parent rdfs:domain :person ;
+    rdfs:range :person ;
+    owl:inverseOf :has_child .
+
+:has_sibling a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain :person ;
+    rdfs:range :person .
+
+:jack a :person .
+
+:john a :person ;
+    :spouse :jane .
+
+:has_child a owl:ObjectProperty ;
+    rdfs:domain :person ;
+    rdfs:range :person .
+
+:jane a :person ;
+    :has_child :janey,
+        :johny .
+
+:janey a :person ;
+    owl:differentFrom :johny .
+
+:johny a :person .
+
+:person a owl:Class .
+```
