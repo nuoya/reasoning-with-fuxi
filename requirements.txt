@@ -1,1 +1,1 @@
-https://github.com/nuoya/FuXi.git
+git+ssh://git@github.com/nuoya/FuXi.git
